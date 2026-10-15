@@ -1,0 +1,49 @@
+<!--
+Phase 1: The Form Foundation and Intercept 
+Requirements
+Build the form interface and take complete control of the form submission process using JavaScript:
+
+Create an HTML page (index.html) containing a <form id="feedback-form"> with:
+A text input for the reviewer’s name (id="reviewer-name").
+A number input (or dropdown <select>) for the star rating from 1 to 5 (id="rating").
+A <textarea> for detailed comments (id="comments").
+A submit button (<button type="submit">Submit Feedback</button>).
+A dedicated container (such as a <div id="error-box"></div>) to hold validation messages.
+Attach a submit event listener to the form.
+Prevent the default browser form submission action so the page does not refresh or navigate away when submitted.
+In the console, log the entered values of all three inputs to verify that you can extract their current values. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunnydale Solutions - Customer Feedback</title>
+</head>
+
+<body>
+
+    <form id="feedback-form" novalidate>
+
+        <label for="reviewer-name">Your Name:</label>
+        <input id="reviewer-name">
+
+        <label for="rating">Star Rating:</label>
+        <input type="number" id="rating" min="1" max="5">
+        
+        <label for="comments">Comments:</label>
+        <textarea id="comments"></textarea>
+
+        <button type="submit">Submit Feedback</button>
+
+        <div id="error-box"></div>
+    
+    </form>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
