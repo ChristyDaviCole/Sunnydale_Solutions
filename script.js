@@ -43,6 +43,21 @@ Use localStorage.getItem("reviewerName") to retrieve the stored string. If the k
 Setting the .value property on your input element lets you pre-populate it with the retrieved name.
 */
 
+/*
+Phase 4: Validation & Reflection
+
+Requirements
+Manual Testing: Test all input paths thoroughly in your browser:
+Try submitting an empty form to verify all error messages appear.
+Try submitting with a 4-star rating or comments missing “wonderful” to verify individual error detection.
+Enter a valid 5-star review containing “wonderful” and confirm the success message displays and the form clears/hides.
+Refresh the page to confirm that localStorage retains your name and pre-populates the input or displays the welcome back banner.
+
+Hints
+Inspect your browser’s developer tools (Application / Storage tab -> Local Storage) to view, verify, or manually clear your stored key-value pairs.
+You can test your site as a brand-new user either by deleting the entry in developer tools or by executing localStorage.clear() in the browser console.
+*/
+
 //Select the form and the three input fields.
 const feedbackForm = document.getElementById("feedback-form");
 

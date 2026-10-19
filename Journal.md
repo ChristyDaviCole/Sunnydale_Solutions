@@ -15,3 +15,7 @@ What did you accomplish in this phase?
 A success message was added to display when the form is submitted correctly.
 Compare using localStorage to cookies: why is localStorage often simpler to use for client-only state, and when might a website prefer cookies over localStorage?
 localStorage is simpler a lot of the time because it's easy to save and retrieve data using JS and the data is saved even after the browser closes. Cookies are preferred if a website needs to send infor to the server with HTTP requests.
+
+Journal Prompt 4:
+What edge cases or unexpected behaviors did you encounter while testing your form validation and local storage? If you asked an AI tutor to review your code, what suggestions did it make, and how did you decide whether to adopt them?
+I didn't encounter any unexpected behaviors. I tested with multiple combos of acceptable and unacceptable answers and the program worked as expected.
