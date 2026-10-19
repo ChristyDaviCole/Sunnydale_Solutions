@@ -9,3 +9,9 @@ What validation approach did you take to collect and display errors?
 I made and used an array called errors to collect validation errors. To display them, I used errors.join("<br>") to display each one on a new line inside the error container on the page.
 Did you display errors all at once or one at a time, and what are the user experience pros and cons of your chosen approach?
 I chose to display them all at once becuase that's what the assignment required. The benifit of doing so is that the user can see all at once what needs to be corrected, so it saves time. The disadvantage is that it might be overwhelming to see so many errors all at once.
+
+Journal Prompt 3:
+What did you accomplish in this phase? 
+A success message was added to display when the form is submitted correctly.
+Compare using localStorage to cookies: why is localStorage often simpler to use for client-only state, and when might a website prefer cookies over localStorage?
+localStorage is simpler a lot of the time because it's easy to save and retrieve data using JS and the data is saved even after the browser closes. Cookies are preferred if a website needs to send infor to the server with HTTP requests.

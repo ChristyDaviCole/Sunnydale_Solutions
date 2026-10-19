@@ -20,6 +20,29 @@ To check for case-insensitive text, convert the comment string to lowercase with
 A helpful pattern is to collect errors into an array (e.g., let errors = [];), push error message strings onto the array when checks fail, and check if (errors.length > 0).
 To display multiple errors, you can populate innerHTML with a list or join your error strings with <br>. */
 
+/*
+Phase 3: Successful Submission and Local Storage State
+
+Requirements
+Handle what occurs when a valid submission passes all checks, and use localStorage to persist the user’s name:
+
+When validation passes with no errors:
+Clear the error container.
+Display a success banner (e.g., “Thank you, [Name]! Your glowing review has been recorded.”).
+You can also hide the form if you want to really sell the “submitted” effect
+Save the reviewer’s name to localStorage under the key "reviewerName".
+
+On initial page load (when the script runs or the DOM loads):
+Check localStorage for the key "reviewerName".
+If a name exists in localStorage, display a friendly welcome message above the form (e.g., “Welcome back, [Name]! Ready to submit another wonderful review?”) and pre-fill the name input field with their saved name.
+
+Hints
+You’ll need to add some new divs or containers to your html for these new messages.
+Use localStorage.setItem("reviewerName", name) to store the name when the form successfully validates.
+Use localStorage.getItem("reviewerName") to retrieve the stored string. If the key has not been set yet, getItem() returns null.
+Setting the .value property on your input element lets you pre-populate it with the retrieved name.
+*/
+
 //Select the form and the three input fields.
 const feedbackForm = document.getElementById("feedback-form");
 
@@ -74,9 +97,20 @@ feedbackForm.addEventListener("submit", function(event) {
 
     }
 
+    errorBox.innerHTML = "Thank you for your wonderful feedback!";
+
+    localStorage.setItem("reviewerName", user);
+    
     console.log(userName.value);
     console.log(starRating.value);
     console.log(userComment.value);
 
 });
 
+const savedName = localStorage.getItem("reviewerName");
+
+if (savedName) {
+    userName.value = savedName;
+    document.getElementById("welcome-box").innerHTML =
+    "Welcome back, " + savedName + "! Ready to submit another wonderful review?";
+}
