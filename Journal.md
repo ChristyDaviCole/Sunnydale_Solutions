@@ -19,3 +19,5 @@ localStorage is simpler a lot of the time because it's easy to save and retrieve
 Journal Prompt 4:
 What edge cases or unexpected behaviors did you encounter while testing your form validation and local storage? If you asked an AI tutor to review your code, what suggestions did it make, and how did you decide whether to adopt them?
 I didn't encounter any unexpected behaviors. I tested with multiple combos of acceptable and unacceptable answers and the program worked as expected.
+
+*Used incorrect phase # on message for previous commit
